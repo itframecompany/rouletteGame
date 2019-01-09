@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>Majorskins Statistics</title>
+		<style type="text/css">
+		html, body {
+			margin: 0;
+			height:100%;
+			font-family:Arial,Helvetica, sans-serif;
+		}
+		
+		.container {
+			display:table;
+			width:100%;
+			max-width:980px;
+			margin:0 auto;
+		}
+		
+		.row { 
+			display:table-row;
+			height:2em;
+		}
+		.row h2 {padding-left:1em;}
+		.row.row-title {}
+		.row.row-head {background:#ccc;}
+		.row.row-even {background:#eef;}
+		.row.row-odd {background:#efe;}
+		.cell {
+			display:table-cell;
+			padding:1em;
+		}
+		.row .cell:first-child{
+			background:#eee;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row row-title">
+				<h2>Majorskins Statistics</h2>
+			</div>
+			<div class="row row-head">
+				<div class="cell">@param</div>
+				<div class="cell">Today(24h)</div>
+				<div class="cell">Yesterday(48-24h)</div>
+			</div>
+			<div class="row row-odd">
+				<div class="cell">Total players</div>
+				<div class="cell">{data.playersTotal}</div>
+				<div class="cell"></div>
+			</div>
+			<div class="row row-even">
+				<div class="cell">New players</div>
+				<div class="cell">{data.newPlayers_today}</div>
+				<div class="cell">{data.newPlayers_yesterday}</div>
+			</div>			
+			<div class="row row-odd">
+				<div class="cell">New signups</div>
+				<div class="cell">{data.newSignups_today}</div>
+				<div class="cell">{data.newSignups_yesterday}</div>
+			</div>
+			<div class="row row-even">
+				<div class="cell">Games played</div>
+				<div class="cell">{data.games_today}</div>
+				<div class="cell">{data.games_yesterday}</div>
+			</div>			
+			<div class="row row-odd">
+				<div class="cell">Total bank</div>
+				<div class="cell">${data.bankTotal_today}</div>
+				<div class="cell">${data.bankTotal_yesterday}</div>
+			</div>
+			<div class="row row-even">
+				<div class="cell">Average bank</div>
+				<div class="cell">${data.bankAvg_today}</div>
+				<div class="cell">${data.bankAvg_yesterday}</div>
+			</div>			
+			<div class="row row-odd">
+				<div class="cell">Real rake</div>
+				<div class="cell">${data.rakeReal_today}</div>
+				<div class="cell">${data.rakeReal_yesterday}</div>
+			</div>
+			<div class="row row-even">
+				<div class="cell">Ideal rake</div>
+				<div class="cell">${data.rakeIdeal_today}</div>
+				<div class="cell">${data.rakeIdeal_yesterday}</div>
+			</div>			
+			<div class="row row-odd">
+				<div class="cell">Total bot items/cost</div>
+				<div class="cell">{data.botItemsNum}</div>
+				<div class="cell">${data.botItemsSum}</div>
+			</div>			
+		</div>
+	</body>
+</html>

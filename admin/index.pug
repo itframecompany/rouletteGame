@@ -1,0 +1,93 @@
+html
+  head
+    title Majorskins Statistics
+    style(type='text/css').
+      html, body {
+      margin: 0;
+      height:100%;
+      font-family:Arial,Helvetica, sans-serif;
+      }
+      .container {
+      display:table;
+      width:100%;
+      max-width:980px;
+      margin:0 auto;
+      }
+      .row {
+      display:table-row;
+      height:2em;
+      }
+      .row h2 {padding-left:1em;}
+      .row.row-title {}
+      .row.row-head {background:#ccc;}
+      .row.row-even {background:#eef;}
+      .row.row-odd {background:#efe;}
+      .cell {
+      display:table-cell;
+      padding:1em;
+      }
+      .row-odd .cell:first-child{
+      background:#ede;
+      }
+      .row-even .cell:first-child{
+      background:#eed;
+      }
+  body
+    .container
+      .row.row-title
+        h2 Majorskins Statistics
+      .row.row-head
+        .cell @param
+        .cell Today(24h)
+        .cell Yesterday(48-24h)
+      .row.row-odd
+        .cell Players
+        .cell= totalPlayers_today
+        .cell= totalPlayers_yesterday      
+      .row.row-even
+        .cell New players
+        .cell= newPlayers_today
+        .cell= newPlayers_yesterday
+      .row.row-odd
+        .cell New signups
+        .cell= newSignups_today
+        .cell= newSignups_yesterday
+      .row.row-even
+        .cell Games played
+        .cell= games_today
+        .cell= games_yesterday
+      .row.row-odd
+        .cell Total bank ($)
+        .cell= bankTotal_today
+        .cell= bankTotal_yesterday
+      .row.row-even
+        .cell Average bank ($)
+        .cell= bankAvg_today
+        .cell= bankAvg_yesterday
+      .row.row-odd
+        .cell Real rake ($)
+        .cell= rakeReal_today
+        .cell= rakeReal_yesterday
+      .row.row-even
+        .cell Ideal rake ($)
+        .cell= rakeIdeal_today
+        .cell= rakeIdeal_yesterday
+    .container
+      .row.row-head
+        .cell @param
+        .cell Total
+      .row.row-even
+        .cell Players
+        .cell= totalPlayers_alltime
+      .row.row-odd
+        .cell Games
+        .cell= games_alltime
+      .row.row-even
+        .cell  Rake (real)
+        .cell= rakeReal_alltime    
+      .row.row-odd
+        .cell Items on bots
+        .cell= botItemsNum
+      .row.row-even
+        .cell Bot item cost ($)
+        .cell= botItemsSum
